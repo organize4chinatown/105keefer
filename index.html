@@ -83,7 +83,37 @@
     .img-modal-cap {
       word-wrap: break-word;
     }
+
+    /* Force light color scheme (prevents Firefox/Chrome auto-dark) */
+    :root {
+      color-scheme: light;
+    }
+
+    /* Make sure backgrounds don't get auto-inverted */
+    html,
+    body {
+      background: #fff !important;
+    }
+
+    /* Prevent UA dark-mode filters from tinting media */
+    img,
+    picture,
+    video,
+    canvas {
+      filter: none !important;
+    }
+
+    /* Keep our hero overlay truly light, even if UA tries to darken */
+    .hero-overlay {
+      background: linear-gradient(to top, rgba(255, 255, 255, .95), rgba(255, 255, 255, .85), rgba(255, 255, 255, .70));
+    }
   </style>
+
+  <!-- Opt out of browser auto-darkening -->
+  <meta name="color-scheme" content="light">
+  <meta name="supported-color-schemes" content="light"> <!-- Safari/iOS hint -->
+  <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
+
 </head>
 
 <body class="bg-white text-brand-500 antialiased" style="width: 100%; height: 100%">
