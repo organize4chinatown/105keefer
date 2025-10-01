@@ -86,6 +86,14 @@
   <main id="main" tabindex="-1">
     <!-- Hero -->
     <section id="home" class="bg-white">
+
+      <!-- Banner Image -->
+      <div class="flex items-center justify-center h-80 mb-12 bg-cover bg-[url(./images/IMG_8670.JPG)] bg-fixed bg-center bg-no-repeat"
+      style="background-position: right 0px top 0px;"><!-- this div have background-image set and needs to be parallax -->
+      </div>
+      <!--<img class="h-auto max-w-full" src="./images/IMG_8670.JPG" alt="image description">-->
+
+
       <div class="mx-auto max-w-5xl px-4 py-10 sm:py-14">
         <h1 class="text-3xl sm:text-4xl md:text-5xl font-extrabold leading-tight">
           570 COLUMBIA IS STILL 105 KEEFER — <span class="text-brand-600">AND WE STILL DON’T WANT IT</span>
@@ -147,6 +155,20 @@
           </li>
         </ol>
       </div>
+      <!-- Image grid -->
+      <div class="p-10 grid grid-cols-3 gap-5 ">
+        <img class="w-full h-full object-cover cursor-pointer" src=
+    "./images/DSC_4493.JPG"
+          alt="Img 1" id="img1" />
+
+        <img class="w-full h-full object-cover cursor-pointer" src=
+    "./images/0K3A9935.jpg"
+          alt="Img 2" id="img2" />
+
+        <img class="w-full h-full object-cover cursor-pointer" src=
+    "./images/aaf6623c-78f4-11e7-84d9-df29f06febc3_1280x720_125654.JPG"
+          alt="Img 3" id="img3" />
+      </div>
     </section>
 
     <!-- Myths vs Truths -->
@@ -202,33 +224,35 @@
     </section>
 
     <!-- Act Now (CTA block) -->
-    <section id="act" class="bg-brand-50 border-y">
+    <section id="act" class="bg-brand-50 border-y justify-end  items-start bg-[url(./images/DSC_4407.jpg)] bg-fixed bg-contain  bg-cover bg-center bg-no-repeat " style="background-position: right 0px top 350px;">
       <div class="mx-auto max-w-5xl px-4 py-10 sm:py-14">
         <h2 class="text-2xl sm:text-3xl font-bold">Act Now</h2>
         <p class="mt-2 text-brand-700">We stopped Beedie in 2017. We stood together again in 2023. In 2025, the fight continues!</p>
 
         <div class="mt-6 grid grid-cols-1 md:grid-cols-3 gap-3">
           <a id="speaker-link-cta" href="#add-your-speaker-link" class="inline-flex items-center justify-center gap-2 rounded-lg bg-brand-600 text-white px-4 py-3 font-semibold shadow hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-brand-600/30">
-            Join the Speaker List
+            Join the Speaker List 
             <span aria-hidden>→</span>
           </a>
-          <a id="whatsapp" href="#add-your-whatsapp-link" class="inline-flex items-center justify-center gap-2 rounded-lg border px-4 py-3 font-semibold hover:bg-brand-100">
-            Join WhatsApp Group
+          <a id="whatsapp" href="#add-your-whatsapp-link" class="bg-brand-100 inline-flex items-center justify-center gap-2 rounded-lg border px-4 py-3 font-semibold hover:bg-red-100">
+            Join WhatsApp Groupe
             <span aria-hidden>→</span>
           </a>
-          <a href="https://linktr.ee/organize4chinatown" target="_blank" rel="noopener" class="inline-flex items-center justify-center gap-2 rounded-lg border px-4 py-3 font-semibold hover:bg-brand-100">
+          <a href="https://linktr.ee/organize4chinatown" target="_blank" rel="noopener" class="bg-brand-100 hover:bg-red-100 inline-flex items-center justify-center gap-2 rounded-lg border px-4 py-3 font-semibold hover:bg-brand-100">
             Linktree
             <span aria-hidden>→</span>
           </a>
         </div>
 
         <div class="mt-4 grid grid-cols-1 md:grid-cols-2 gap-3">
-          <a href="https://forms.gle/YZKeWUdaNtgMJ4UHA" target="_blank" rel="noopener" class="inline-flex items-center justify-center gap-2 rounded-lg border px-4 py-3 font-medium hover:bg-brand-100">Survey</a>
-          <a href="mailto:organize4chinatown@gmail.com?subject=570%20Columbia%20/105%20Keefer" class="inline-flex items-center justify-center gap-2 rounded-lg border px-4 py-3 font-medium hover:bg-brand-100">organize4chinatown@gmail.com</a>
+          <a href="https://forms.gle/YZKeWUdaNtgMJ4UHA" target="_blank" rel="noopener" class="inline-flex items-center justify-center gap-2 rounded-lg border px-4 py-3 font-medium bg-brand-100 hover:bg-red-100">Survey</a>
+          <a href="mailto:organize4chinatown@gmail.com?subject=570%20Columbia%20/105%20Keefer" class="inline-flex items-center justify-center gap-2 rounded-lg border px-4 py-3 font-medium bg-brand-100 hover:bg-red-100">organize4chinatown@gmail.com</a>
         </div>
       </div>
     </section>
   </main>
+
+
 
   <footer class="bg-white">
     <div class="mx-auto max-w-5xl px-4 py-10">
@@ -236,6 +260,56 @@
       <p class="text-sm text-brand-700 mt-1">Built with care for accessibility and mobile-first performance. Replace placeholder links marked <em>add-your-…-link</em> with your actual URLs.</p>
     </div>
   </footer>
+
+  <!-- (Image Zoom) The Modal -->
+  <div id="modal"
+    class="hidden fixed top-0 left-0 z-80 
+        w-screen h-screen bg-black/70 flex 
+        justify-center items-center">
+
+    <!-- The close button -->
+    <a class="fixed z-90 top-6 right-8 
+        text-white text-5xl font-bold" 
+    href="javascript:void(0)"
+    onclick="closeModal()">
+      ×
+    </a>
+
+    <!-- A big image will be displayed here -->
+    <img id="modal-img"
+      class="max-w-[calc(screen-1000rem)] max-h-[calc(h-screen-300px)] object-cover"/>
+  </div>
+  <script>
+      
+      // Get all the img elements in the grid
+      var images = document.querySelectorAll('.grid img');
+
+      // Loop through each img element
+      images.forEach(function (img) {
+        
+      // Add a click event listener to each img element
+        img.addEventListener('click', function () {
+          showModal(img.src);
+        });
+      });
+
+      // Get the modal by id
+      var modal = document.getElementById("modal");
+
+      // Get the modal image tag
+      var modalImg = document.getElementById("modal-img");
+
+      // This function is called when a small image is clicked
+      function showModal(src) {
+        modal.classList.remove('hidden');
+        modalImg.src = src;
+      }
+
+      // This function is called when the close button is clicked
+      function closeModal() {
+        modal.classList.add('hidden');
+      }
+    </script>
 
   <script>
     // Set copyright year
