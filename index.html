@@ -89,6 +89,13 @@
       color-scheme: light;
     }
 
+    /* Ensure base stays white even if the UA tries to darken */
+    html,
+    body {
+      background: #fff !important;
+      color: #111827;
+    }
+
     /* Make sure backgrounds don't get auto-inverted */
     html,
     body {
@@ -101,6 +108,32 @@
     video,
     canvas {
       filter: none !important;
+    }
+
+    /* Extra belt-and-suspenders: if the device prefers dark, still use our light palette */
+    @media (prefers-color-scheme: dark) {
+      :root {
+        color-scheme: light;
+      }
+
+      html,
+      body {
+        background: #fff !important;
+        color: #111827 !important;
+      }
+
+      .bg-white,
+      .bg-brand-50,
+      .bg-brand-100 {
+        background-color: #fff !important;
+      }
+
+      img,
+      picture,
+      video,
+      canvas {
+        filter: none !important;
+      }
     }
 
     /* Keep our hero overlay truly light, even if UA tries to darken */
@@ -161,7 +194,7 @@
     <section id="home" class="relative text-brand-700"
       style="background-image: url('./images/IMG_8670.JPG'); background-size: cover; background-position: center; background-attachment: scroll;">
       <div class="relative">
-        <div class="absolute inset-0 bg-gradient-to-t from-white/95 via-white/85 to-white/70"></div>
+        <div class="absolute inset-0 hero-overlay"></div>
         <div class="relative mx-auto max-w-5xl px-4 py-12 sm:py-16">
           <h1 class="text-3xl sm:text-5xl font-extrabold leading-tight tracking-tight hero-text-shadow">
             570 Columbia is still 105 Keefer — <br><span class="text-brand-600">and we still don’t want it</span>
