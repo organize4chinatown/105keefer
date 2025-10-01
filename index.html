@@ -140,6 +140,18 @@
     .hero-overlay {
       background: linear-gradient(to top, rgba(255, 255, 255, .95), rgba(255, 255, 255, .85), rgba(255, 255, 255, .70));
     }
+
+    /* Act Now section background – opt out of dark mode inversion */
+    .actnow-bg {
+      background-image: url('./images/DSC_4407.jpg');
+      background-size: cover;
+      background-position: center;
+      background-attachment: scroll;
+      background-color: #fff;
+      /* fallback for no-image */
+      color-scheme: light;
+      /* force browsers to keep it light */
+    }
   </style>
 
   <!-- Opt out of browser auto-darkening -->
@@ -350,12 +362,16 @@
     </section>
 
     <!-- Act Now (CTA block) -->
-    <section id="act" class="bg-brand-50 border-y"
-      style="background-image: url('./images/DSC_4407.jpg'); background-size: cover; background-position: center; background-attachment: scroll;">
-      <div class="mx-auto max-w-5xl px-4 py-10 sm:py-14">
+    <section id="act" class="relative bg-brand-50 border-y actnow-bg">
+      <!-- Light overlay to keep text legible -->
+      <!-- <div class="absolute inset-0 bg-white/50"></div> -->
+
+      <!-- Content sits above overlay -->
+      <div class="relative mx-auto max-w-5xl px-4 py-10 sm:py-14">
         <h2 class="text-2xl sm:text-3xl font-bold">Act Now</h2>
-        <p class="mt-2 text-brand-700">We stopped Beedie in 2017. We stood together again in 2023. In 2025, the fight
-          continues!</p>
+        <p class="mt-2 text-brand-700">
+          We stopped Beedie in 2017. We stood together again in 2023. In 2025, the fight continues!
+        </p>
 
         <div class="mt-6 grid grid-cols-1 md:grid-cols-3 gap-3">
           <a id="speaker-link-cta" href="#add-your-speaker-link"
@@ -367,16 +383,20 @@
             Join WhatsApp Group <span aria-hidden>→</span>
           </a>
           <a href="https://linktr.ee/organize4chinatown" target="_blank" rel="noopener"
-            class="bg-brand-100 inline-flex items-center justify-center gap-2 rounded-lg border px-4 py-3 font-semibold hover:bg-brand-100">
+            class="bg-brand-100 hover:bg-red-100 inline-flex items-center justify-center gap-2 rounded-lg border px-4 py-3 font-semibold">
             Linktree <span aria-hidden>→</span>
           </a>
         </div>
 
         <div class="mt-4 grid grid-cols-1 md:grid-cols-2 gap-3">
           <a href="https://forms.gle/YZKeWUdaNtgMJ4UHA" target="_blank" rel="noopener"
-            class="inline-flex items-center justify-center gap-2 rounded-lg border px-4 py-3 font-medium bg-brand-100 hover:bg-red-100">Survey</a>
+            class="inline-flex items-center justify-center gap-2 rounded-lg border px-4 py-3 font-medium bg-brand-100 hover:bg-red-100">
+            Survey
+          </a>
           <a href="mailto:organize4chinatown@gmail.com?subject=570%20Columbia%20/105%20Keefer"
-            class="inline-flex items-center justify-center gap-2 rounded-lg border px-4 py-3 font-medium bg-brand-100 hover:bg-red-100">organize4chinatown@gmail.com</a>
+            class="inline-flex items-center justify-center gap-2 rounded-lg border px-4 py-3 font-medium bg-brand-100 hover:bg-red-100">
+            organize4chinatown@gmail.com
+          </a>
         </div>
       </div>
     </section>
