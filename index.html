@@ -1,26 +1,31 @@
 <!doctype html>
 <html lang="en" style="width: 100%; height: 100%">
+
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>570 Columbia is still 105 Keefer — We still don’t want it</title>
-  <meta name="description" content="Chinatown & DTES residents oppose luxury condos at 105 Keefer/570 Columbia. We need community-serving, truly affordable housing—not investor condos." />
+  <meta name="description"
+    content="Chinatown & DTES residents oppose luxury condos at 105 Keefer/570 Columbia. We need community-serving, truly affordable housing—not investor condos." />
+
 
   <!-- Open Graph / Social -->
   <meta property="og:title" content="570 Columbia is still 105 Keefer — We still don’t want it" />
-  <meta property="og:description" content="Over a decade of community resistance. Join us: speak at the DPB, organize, and build real affordable housing in Chinatown & the DTES." />
+  <meta property="og:description"
+    content="Over a decade of community resistance. Join us: speak at the DPB, organize, and build real affordable housing in Chinatown & the DTES." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://YOUR-DOMAIN" />
   <meta property="og:image" content="/og-image.png" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="570 Columbia is still 105 Keefer — We still don’t want it" />
-  <meta name="twitter:description" content="Join the movement for homes, not condos. Speak at the DPB hearing and organize with us." />
+  <meta name="twitter:description"
+    content="Join the movement for homes, not condos. Speak at the DPB hearing and organize with us." />
   <meta name="twitter:image" content="/og-image.png" />
+
 
   <!-- Tailwind CSS (CDN) -->
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
-    // Optional: Tailwind custom theme tokens
     tailwind.config = {
       theme: {
         extend: {
@@ -31,8 +36,8 @@
               200: '#e5e7eb',
               300: '#d1d5db',
               400: '#9ca3af',
-              500: '#111827', // near-black for strong type
-              600: '#dc2626', // action red
+              500: '#111827',
+              600: '#dc2626',
               700: '#1f2937',
               800: '#0b0f16'
             }
@@ -41,32 +46,64 @@
       }
     }
   </script>
-
-  <!-- Basic print improvements -->
   <style>
     @media print {
-      .no-print { display: none !important; }
-      a[href^="http"]::after { content: " (" attr(href) ")"; font-size: 0.9em; }
-      body { color: #000; }
+      .no-print {
+        display: none !important;
+      }
+
+      a[href^="http"]::after {
+        content: " (" attr(href) ")";
+        font-size: 0.9em;
+      }
+
+      body {
+        color: #000;
+      }
+    }
+
+    /* Improves heading legibility over photos */
+    .hero-text-shadow {
+      text-shadow: 0 1px 3px rgba(0, 0, 0, 0.25);
+    }
+
+    /* Consistent modal sizing */
+    .modal-viewport {
+      width: min(92vw, 1100px);
+    }
+
+    .img-modal-media {
+      width: 100%;
+      height: auto;
+      max-height: calc(var(--vh, 1vh) * 85);
+      /* stable mobile viewport */
+      object-fit: contain;
+    }
+
+    .img-modal-cap {
+      word-wrap: break-word;
     }
   </style>
 </head>
-<body class="bg-white text-brand-500 antialiased" style="width: 100%; height: 100%">
-  <!-- Skip link for accessibility -->
-  <a href="#main" class="sr-only focus:not-sr-only focus:absolute focus:top-2 focus:left-2 bg-white border px-3 py-2 rounded">Skip to content</a>
 
-  <!-- Top Alert / CTA -->
+<body class="bg-white text-brand-500 antialiased" style="width: 100%; height: 100%">
+  <a href="#main"
+    class="sr-only focus:not-sr-only focus:absolute focus:top-2 focus:left-2 bg-white border px-3 py-2 rounded">Skip to
+    content</a>
+
+
+  <!-- Top Alert -->
   <div class="w-full bg-brand-600 text-white text-sm md:text-base">
     <div class="mx-auto max-w-5xl px-4 py-2 flex flex-col md:flex-row items-start md:items-center gap-2 md:gap-4">
-      <span class="font-semibold tracking-tight">DPB Hearing — Oct 20</span>
+      <span class="font-semibold tracking-tight">Public Hearing @ City Hall — Oct 20</span>
       <span class="opacity-90">Add your voice. We’re organizing 100+ speakers.</span>
       <div class="flex-1"></div>
-      <a id="speaker-link-top" href="#add-your-speaker-link" class="inline-flex items-center gap-2 rounded bg-white/95 text-brand-600 px-3 py-1.5 font-semibold shadow hover:bg-white focus:outline-none focus:ring-2 focus:ring-white/60">
-        Join the Speaker List
-        <span aria-hidden>→</span>
-      </a>
+      <a id="speaker-link-top" href="#add-your-speaker-link"
+        class="inline-flex items-center gap-2 rounded bg-white/95 text-brand-600 px-3 py-1.5 font-semibold shadow hover:bg-white focus:outline-none focus:ring-2 focus:ring-white/60">Join
+        the Speaker List →</a>
     </div>
   </div>
+
 
   <!-- Sticky Header -->
   <header class="sticky top-0 z-40 bg-white/90 backdrop-blur border-b">
@@ -79,42 +116,52 @@
         <a href="#why" class="hover:underline">Why This Matters</a>
         <a href="#act" class="hover:underline font-semibold">Act Now</a>
       </nav>
-      <a href="#act" class="md:hidden ml-auto inline-flex items-center rounded bg-brand-600 text-white px-3 py-1.5 text-sm font-semibold">Act Now</a>
+      <a href="#act"
+        class="md:hidden ml-auto inline-flex items-center rounded bg-brand-600 text-white px-3 py-1.5 text-sm font-semibold">Act
+        Now</a>
     </div>
   </header>
 
-  <main id="main" tabindex="-1">
-    <!-- Hero -->
-    <section id="home" class="bg-white">
 
-      <!-- Banner Image -->
-      <div class="flex items-center justify-center h-80 mb-12 bg-cover bg-[url(./images/IMG_8670.JPG)] bg-fixed bg-center bg-no-repeat"
-      style="background-position: right 0px top 0px;"><!-- this div have background-image set and needs to be parallax -->
-      </div>
-      <!--<img class="h-auto max-w-full" src="./images/IMG_8670.JPG" alt="image description">-->
+  <!-- Banner at top -->
 
 
-      <div class="mx-auto max-w-5xl px-4 py-10 sm:py-14">
-        <h1 class="text-3xl sm:text-4xl md:text-5xl font-extrabold leading-tight">
-          570 COLUMBIA IS STILL 105 KEEFER — <span class="text-brand-600">AND WE STILL DON’T WANT IT</span>
-        </h1>
-        <p class="mt-3 text-lg sm:text-xl text-brand-700">you can change the name, but you can’t change our history!</p>
-        <div class="mt-6 grid grid-cols-1 sm:grid-cols-2 gap-3">
-          <a id="speaker-link-hero" href="#add-your-speaker-link" class="inline-flex items-center justify-center gap-2 rounded-lg bg-brand-600 text-white px-4 py-3 font-semibold shadow hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-brand-600/30">
-            Join the Speaker List (Oct 20)
-            <span aria-hidden>→</span>
-          </a>
-          <div class="flex gap-3">
-            <a href="https://forms.gle/YZKeWUdaNtgMJ4UHA" class="flex-1 inline-flex items-center justify-center rounded-lg border px-4 py-3 font-medium hover:bg-brand-100" target="_blank" rel="noopener">Take the Survey</a>
-            <a href="mailto:organize4chinatown@gmail.com?subject=570%20Columbia%20/105%20Keefer" class="flex-1 inline-flex items-center justify-center rounded-lg border px-4 py-3 font-medium hover:bg-brand-100">Email Us</a>
+  <main id="main" tabindex="-1" class="pb-16 md:pb-0">
+    <!-- Hero text section (now below banner) -->
+    <section id="home" class="relative text-brand-700"
+      style="background-image: url('./images/IMG_8670.JPG'); background-size: cover; background-position: center; background-attachment: scroll;">
+      <div class="relative">
+        <div class="absolute inset-0 bg-gradient-to-t from-white/95 via-white/85 to-white/70"></div>
+        <div class="relative mx-auto max-w-5xl px-4 py-12 sm:py-16">
+          <h1 class="text-3xl sm:text-5xl font-extrabold leading-tight tracking-tight hero-text-shadow">
+            570 Columbia is still 105 Keefer — <br><span class="text-brand-600">and we still don’t want it</span>
+          </h1>
+          <p class="mt-3 text-lg sm:text-xl hero-text-shadow"><i>You can change the name, but you can’t change our
+              history.</i></p>
+
+
+          <div class="mt-6 flex justify-start">
+            <a id="speaker-link-hero" href="https://forms.gle/YZKeWUdaNtgMJ4UHA" target="_blank" rel="noopener"
+              class="inline-flex items-center justify-center gap-2 rounded-md bg-brand-600 text-white px-5 py-2 text-base font-semibold shadow-md hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-brand-600/40">
+              Sign Up to Speak or Support (Oct 20) <span aria-hidden>→</span>
+            </a>
           </div>
-        </div>
-        <p class="mt-6 max-w-3xl text-base sm:text-lg leading-relaxed text-brand-700">
-          For over ten years, 105 Keefer has been at the center of a fight for Chinatown’s future. Developer Beedie Living wants to turn this site into luxury condos. Our community has said again and again: we need affordable homes for people and not condos for investors. This fight is not just about one building. It’s about cultivating a thriving community in Chinatown and the Downtown Eastside (DTES), where low-income seniors can age in place and where unhoused residents, workers, and youth can find homes. Our neighbourhood is not to be carved up for profit and speculation.
-        </p>
-        <div class="mt-5 flex flex-wrap gap-3">
-          <a href="https://linktr.ee/organize4chinatown" target="_blank" rel="noopener" class="inline-flex items-center rounded border px-3 py-2 text-sm font-medium hover:bg-brand-100">Linktree</a>
-          <a href="#whatsapp" class="inline-flex items-center rounded border px-3 py-2 text-sm font-medium hover:bg-brand-100">Join WhatsApp Group</a>
+
+
+          <div class="mt-6 max-w-3xl space-y-4 text-base sm:text-lg leading-relaxed">
+            <p>For over a decade, 105 Keefer has been at the center of the fight for Chinatown’s future. Developer
+              Beedie Living wants luxury condos here. Our community keeps saying the same thing: we need affordable
+              homes for people, not investments for profit.</p>
+            <p>This isn’t just about one building. It’s about a thriving Chinatown and DTES where low-income seniors can
+              age in place and where unhoused residents, workers, and youth can find homes. Our neighbourhood is not for
+              speculation.</p>
+          </div>
+
+
+          <div class="mt-6">
+            <p class="text-base sm:text-lg font-medium">Want to take action? Head down to the <a href="#act"
+                class="underline font-semibold">Act Now</a> section.</p>
+          </div>
         </div>
       </div>
     </section>
@@ -123,17 +170,23 @@
     <section id="now" class="bg-brand-50 border-y">
       <div class="mx-auto max-w-5xl px-4 py-10 sm:py-14">
         <h2 class="text-2xl sm:text-3xl font-bold">What’s Happening Now</h2>
-        <p class="mt-3 text-brand-700 max-w-3xl">Beedie has rebranded 105 Keefer as <span class="font-semibold">570 Columbia</span> in an attempt to erase the history of resistance tied to this site. But it’s the same project — and they are getting bolder:</p>
+        <p class="mt-3 text-brand-700 max-w-3xl">Beedie rebranded <span class="font-semibold">105 Keefer</span> as <span
+            class="font-semibold">570 Columbia</span> to erase a decade of resistance. Same project—new label—and bolder
+          asks:</p>
         <ul class="mt-6 grid grid-cols-1 md:grid-cols-2 gap-4">
-          <li class="p-4 rounded-lg bg-white border">More condos, increased density, and <strong>no social housing</strong></li>
-          <li class="p-4 rounded-lg bg-white border">Setback and height limits <strong>ignored</strong></li>
-          <li class="p-4 rounded-lg bg-white border">The building <strong>overshadows and encroaches</strong> on Memorial Square</li>
-          <li class="p-4 rounded-lg bg-white border">A community service space <strong>shoved into a back alley</strong>, small and inaccessible</li>
+          <li class="p-4 rounded-lg bg-white border"><span class="font-semibold">No social housing</span> despite higher
+            density</li>
+          <li class="p-4 rounded-lg bg-white border">Setback and height limits <span
+              class="font-semibold">ignored</span></li>
+          <li class="p-4 rounded-lg bg-white border">Overshadows and encroaches on <span class="font-semibold">Memorial
+              Square</span></li>
+          <li class="p-4 rounded-lg bg-white border">“Community space” hidden in a <span class="font-semibold">back
+              alley</span>—small and inaccessible</li>
         </ul>
       </div>
     </section>
 
-    <!-- History / timeline -->
+    <!-- History / timeline + Gallery -->
     <section id="history" class="bg-white">
       <div class="mx-auto max-w-5xl px-4 py-10 sm:py-14">
         <h2 class="text-2xl sm:text-3xl font-bold">Our History of Resistance</h2>
@@ -141,34 +194,67 @@
           <li>
             <div class="absolute -left-1.5 mt-1 w-3 h-3 rounded-full bg-brand-600" aria-hidden></div>
             <h3 class="font-semibold">2017</h3>
-            <p class="mt-2 text-brand-700">Fuelled by greed, Beedie applied for rezoning to increase the size of their condo development–we fought against their applications every time. After four failed rezoning attempts, Beedie tried to bypass the City Council by going straight to the Development Permit Board (DPB). They stripped out social housing entirely. Over 200 people spoke against the project. For the first time in decades, the DPB said “no”. This was a historic win for Chinatown and for the housing justice movement as a whole in Vancouver.</p>
+            <p class="mt-2 text-brand-700">Fuelled by greed, Beedie applied for rezoning to increase the size of their
+              condo development–we fought against their applications every time. After four failed rezoning attempts,
+              Beedie tried to bypass the City Council by going straight to the Development Permit Board (DPB). They
+              stripped out social housing entirely. Over 200 people spoke against the project. For the first time in
+              decades, the DPB said “no”. This was a historic win for Chinatown and for the housing justice movement as
+              a whole in Vancouver.</p>
           </li>
           <li>
             <div class="absolute -left-1.5 mt-1 w-3 h-3 rounded-full bg-brand-600" aria-hidden></div>
             <h3 class="font-semibold">2017–2022</h3>
-            <p class="mt-2 text-brand-700">Beedie spent millions of dollars going through the legal process to overturn the decision. Their money took them all the way to the BC Supreme Court, who ordered the DPB to rehear the case.</p>
+            <p class="mt-2 text-brand-700">Beedie spent millions of dollars going through the legal process to overturn
+              the decision. Their money took them all the way to the BC Supreme Court, who ordered the DPB to rehear the
+              case.</p>
           </li>
           <li>
             <div class="absolute -left-1.5 mt-1 w-3 h-3 rounded-full bg-brand-600" aria-hidden></div>
             <h3 class="font-semibold">2023</h3>
-            <p class="mt-2 text-brand-700">The project came back. Over 500 seniors, tenants, and residents from Chinatown and the DTES filled a community town hall and voted “no” to condos and unanimously “yes” to 100% social housing. For a month, people rallied outside City Hall. Despite hearing numerous speeches in opposition, the DPB granted Beedie a permit “with conditions.” However, the fight reinvigorated residents and organizers to build a more sustained movement.</p>
+            <p class="mt-2 text-brand-700">The project came back. Over 500 seniors, tenants, and residents from
+              Chinatown and the DTES filled a community town hall and voted “no” to condos and unanimously “yes” to 100%
+              social housing. For a month, people rallied outside City Hall. Despite hearing numerous speeches in
+              opposition, the DPB granted Beedie a permit “with conditions.” However, the fight reinvigorated residents
+              and organizers to build a more sustained movement.</p>
           </li>
         </ol>
       </div>
-      <!-- Image grid -->
-      <div class="p-10 grid grid-cols-3 gap-5 ">
-        <img class="w-full h-full object-cover cursor-pointer" src=
-    "./images/DSC_4493.JPG"
-          alt="Img 1" id="img1" />
 
-        <img class="w-full h-full object-cover cursor-pointer" src=
-    "./images/0K3A9935.jpg"
-          alt="Img 2" id="img2" />
-
-        <img class="w-full h-full object-cover cursor-pointer" src=
-    "./images/aaf6623c-78f4-11e7-84d9-df29f06febc3_1280x720_125654.JPG"
-          alt="Img 3" id="img3" />
-      </div>
+      <!-- Gallery -->
+      <section id="gallery" class="mx-auto max-w-5xl px-4 pb-10">
+        <h2 class="sr-only">Gallery</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+          <!-- Card 1 -->
+          <figure class="group rounded-lg overflow-hidden border bg-white">
+            <button type="button" class="w-full block" data-src="./images/DSC_4493.JPG"
+              data-alt="Community rally against 105 Keefer / 570 Columbia">
+              <img src="./images/DSC_4493.JPG" alt="Community rally against 105 Keefer / 570 Columbia" loading="lazy"
+                decoding="async" class="w-full h-56 sm:h-56 md:h-48 object-cover transition group-hover:scale-[1.02]" />
+            </button>
+            <figcaption class="px-3 py-2 text-sm text-brand-700">Community rally at City Hall</figcaption>
+          </figure>
+          <!-- Card 2 -->
+          <figure class="group rounded-lg overflow-hidden border bg-white">
+            <button type="button" class="w-full block" data-src="./images/0K3A9935.jpg"
+              data-alt="Speakers addressing supporters at the rally">
+              <img src="./images/0K3A9935.jpg" alt="Speakers addressing supporters at the rally" loading="lazy"
+                decoding="async" class="w-full h-56 sm:h-56 md:h-48 object-cover transition group-hover:scale-[1.02]" />
+            </button>
+            <figcaption class="px-3 py-2 text-sm text-brand-700">Speakers & supporters</figcaption>
+          </figure>
+          <!-- Card 3 -->
+          <figure class="group rounded-lg overflow-hidden border bg-white">
+            <button type="button" class="w-full block"
+              data-src="./images/aaf6623c-78f4-11e7-84d9-df29f06febc3_1280x720_125654.JPG"
+              data-alt="Historic protest image from Chinatown">
+              <img src="./images/aaf6623c-78f4-11e7-84d9-df29f06febc3_1280x720_125654.JPG"
+                alt="Historic protest image from Chinatown" loading="lazy" decoding="async"
+                class="w-full h-56 sm:h-56 md:h-48 object-cover transition group-hover:scale-[1.02]" />
+            </button>
+            <figcaption class="px-3 py-2 text-sm text-brand-700">Historic protest in Chinatown</figcaption>
+          </figure>
+        </div>
+      </section>
     </section>
 
     <!-- Myths vs Truths -->
@@ -176,157 +262,149 @@
       <div class="mx-auto max-w-5xl px-4 py-10 sm:py-14">
         <h2 class="text-2xl sm:text-3xl font-bold">Myths vs. Truths</h2>
         <div class="mt-6 grid grid-cols-1 md:grid-cols-2 gap-4">
-          <details class="rounded-lg bg-white border p-4 group">
-            <summary class="cursor-pointer font-semibold">Myth: Condos will “revitalize” Chinatown.</summary>
-            <p class="mt-2 text-brand-700">Truth: Condos push out the very people who make this community vibrant by raising rents and property taxes. Real revitalization means housing and services that serve our community.</p>
-          </details>
-          <details class="rounded-lg bg-white border p-4">
-            <summary class="cursor-pointer font-semibold">Myth: Any new housing is good.</summary>
-            <p class="mt-2 text-brand-700">Truth: If it isn’t affordable, it exacerbates the deeply unaffordable housing crisis. Luxury condos often sit empty as investments and people who can’t afford to live there are discriminated against. We need community-serving affordable housing — real homes for people, not profit.</p>
-          </details>
-          <details class="rounded-lg bg-white border p-4 md:col-span-2">
-            <summary class="cursor-pointer font-semibold">Myth: Chinatown has no “residential base”.</summary>
-            <p class="mt-2 text-brand-700">Truth: What they mean is Chinatown doesn’t have affluent residents. That claim erases the thousands of people who already live here and depend on this neighbourhood every day.</p>
-          </details>
-        </div>
-      </div>
-    </section>
-
-    <!-- Why this matters -->
-    <section id="why" class="bg-white">
-      <div class="mx-auto max-w-5xl px-4 py-10 sm:py-14">
-        <h2 class="text-2xl sm:text-3xl font-bold">Why This Matters</h2>
-        <div class="mt-6 grid grid-cols-1 md:grid-cols-2 gap-4">
-          <div class="rounded-lg border p-4">
-            <ul class="list-disc list-inside space-y-2 text-brand-700">
-              <li>Displaces seniors who rely on SROs, supportive, and senior housing</li>
-              <li>Forces out culturally relevant and affordable shops and services in Chinatown</li>
-              <li>Increases surveillance and discrimination against residents, especially low-income and unhoused people</li>
-            </ul>
-            <p class="mt-3 text-brand-700">These harms are already happening—and will worsen if we don’t act now.</p>
+          <div class="rounded-lg bg-white border p-5">
+            <p class="text-xs uppercase tracking-wide text-brand-400">Myth</p>
+            <h3 class="font-semibold">“Condos will revitalize Chinatown.”</h3>
+            <p class="mt-2 text-brand-700"><span class="font-semibold">Truth:</span> Condos raise rents and property
+              taxes, pushing out the people who make this community vibrant. Real revitalization means housing and
+              services that serve the community.</p>
           </div>
-          <div class="rounded-lg border p-4">
-            <h3 class="font-semibold">What You Can Do</h3>
-            <ul class="mt-3 space-y-2">
-              <li>
-                <a href="#add-your-speaker-link" class="inline-flex items-center gap-2 underline font-medium">Speak at the DPB hearing on Oct 20 — Join the speaker’s list <span aria-hidden>→</span></a>
-              </li>
-              <li>
-                <a href="#whatsapp" class="inline-flex items-center gap-2 underline font-medium">Join the movement — WhatsApp group & volunteer <span aria-hidden>→</span></a>
-              </li>
-              <li>
-                <a href="https://forms.gle/YZKeWUdaNtgMJ4UHA" class="inline-flex items-center gap-2 underline font-medium" target="_blank" rel="noopener">Fill out the survey <span aria-hidden>→</span></a>
-              </li>
-            </ul>
+          <div class="rounded-lg bg-white border p-5">
+            <p class="text-xs uppercase tracking-wide text-brand-400">Myth</p>
+            <h3 class="font-semibold">“Any new housing is good.”</h3>
+            <p class="mt-2 text-brand-700"><span class="font-semibold">Truth:</span> If homes aren’t affordable, they
+              deepen the crisis. Luxury condos often sit empty as investments. We need community-serving, affordable
+              homes—not profit machines.</p>
+          </div>
+          <div class="rounded-lg bg-white border p-5 md:col-span-2">
+            <p class="text-xs uppercase tracking-wide text-brand-400">Myth</p>
+            <h3 class="font-semibold">“Chinatown has no residential base.”</h3>
+            <p class="mt-2 text-brand-700"><span class="font-semibold">Truth:</span> That erases thousands of low-income
+              seniors, workers, families, and neighbors who already live here and rely on this community every day.</p>
           </div>
         </div>
       </div>
     </section>
 
     <!-- Act Now (CTA block) -->
-    <section id="act" class="bg-brand-50 border-y justify-end  items-start bg-[url(./images/DSC_4407.jpg)] bg-fixed bg-contain  bg-cover bg-center" style="background-position: right 0px top 350px; background-size: 100% 100%">
+    <section id="act" class="bg-brand-50 border-y"
+      style="background-image: url('./images/DSC_4407.jpg'); background-size: cover; background-position: center; background-attachment: scroll;">
       <div class="mx-auto max-w-5xl px-4 py-10 sm:py-14">
         <h2 class="text-2xl sm:text-3xl font-bold">Act Now</h2>
-        <p class="mt-2 text-brand-700">We stopped Beedie in 2017. We stood together again in 2023. In 2025, the fight continues!</p>
+        <p class="mt-2 text-brand-700">We stopped Beedie in 2017. We stood together again in 2023. In 2025, the fight
+          continues!</p>
 
         <div class="mt-6 grid grid-cols-1 md:grid-cols-3 gap-3">
-          <a id="speaker-link-cta" href="#add-your-speaker-link" class="inline-flex items-center justify-center gap-2 rounded-lg bg-brand-600 text-white px-4 py-3 font-semibold shadow hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-brand-600/30">
-            Join the Speaker List 
-            <span aria-hidden>→</span>
+          <a id="speaker-link-cta" href="#add-your-speaker-link"
+            class="inline-flex items-center justify-center gap-2 rounded-lg bg-brand-600 text-white px-4 py-3 font-semibold shadow hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-brand-600/30">
+            Join the Speaker List <span aria-hidden>→</span>
           </a>
-          <a id="whatsapp" href="#add-your-whatsapp-link" class="bg-brand-100 inline-flex items-center justify-center gap-2 rounded-lg border px-4 py-3 font-semibold hover:bg-red-100">
-            Join WhatsApp Groupe
-            <span aria-hidden>→</span>
+          <a id="whatsapp" href="#add-your-whatsapp-link"
+            class="bg-brand-100 inline-flex items-center justify-center gap-2 rounded-lg border px-4 py-3 font-semibold hover:bg-red-100">
+            Join WhatsApp Group <span aria-hidden>→</span>
           </a>
-          <a href="https://linktr.ee/organize4chinatown" target="_blank" rel="noopener" class="bg-brand-100 hover:bg-red-100 inline-flex items-center justify-center gap-2 rounded-lg border px-4 py-3 font-semibold hover:bg-brand-100">
-            Linktree
-            <span aria-hidden>→</span>
+          <a href="https://linktr.ee/organize4chinatown" target="_blank" rel="noopener"
+            class="bg-brand-100 inline-flex items-center justify-center gap-2 rounded-lg border px-4 py-3 font-semibold hover:bg-brand-100">
+            Linktree <span aria-hidden>→</span>
           </a>
         </div>
 
         <div class="mt-4 grid grid-cols-1 md:grid-cols-2 gap-3">
-          <a href="https://forms.gle/YZKeWUdaNtgMJ4UHA" target="_blank" rel="noopener" class="inline-flex items-center justify-center gap-2 rounded-lg border px-4 py-3 font-medium bg-brand-100 hover:bg-red-100">Survey</a>
-          <a href="mailto:organize4chinatown@gmail.com?subject=570%20Columbia%20/105%20Keefer" class="inline-flex items-center justify-center gap-2 rounded-lg border px-4 py-3 font-medium bg-brand-100 hover:bg-red-100">organize4chinatown@gmail.com</a>
+          <a href="https://forms.gle/YZKeWUdaNtgMJ4UHA" target="_blank" rel="noopener"
+            class="inline-flex items-center justify-center gap-2 rounded-lg border px-4 py-3 font-medium bg-brand-100 hover:bg-red-100">Survey</a>
+          <a href="mailto:organize4chinatown@gmail.com?subject=570%20Columbia%20/105%20Keefer"
+            class="inline-flex items-center justify-center gap-2 rounded-lg border px-4 py-3 font-medium bg-brand-100 hover:bg-red-100">organize4chinatown@gmail.com</a>
         </div>
       </div>
     </section>
   </main>
 
-
-
   <footer class="bg-white">
     <div class="mx-auto max-w-5xl px-4 py-10">
-      <p class="text-sm text-brand-700">© <span id="y"></span> Chinatown & DTES Residents and Organizers. All rights reserved.</p>
-      <!--<p class="text-sm text-brand-700 mt-1">Built with care for accessibility and mobile-first performance. Replace placeholder links marked <em>add-your-…-link</em> with your actual URLs.</p>-->
+      <p class="text-sm text-brand-700">© <span id="y"></span> Chinatown & DTES Residents and Organizers. All rights
+        reserved.</p>
     </div>
   </footer>
 
-  <!-- (Image Zoom) The Modal -->
-  <div id="modal"
-    class="hidden fixed top-0 left-0 z-80 
-        w-screen h-screen bg-black/70 flex 
-        justify-center items-center">
-
-    <!-- The close button -->
-    <a class="fixed z-90 top-6 right-8 
-        text-white text-5xl font-bold" 
-    href="javascript:void(0)"
-    onclick="closeModal()">
-      ×
-    </a>
-
-    <!-- A big image will be displayed here -->
-    <img id="modal-img"
-      class="max-w-[calc(screen-1000rem)] max-h-[calc(h-screen-300px)] object-cover"/>
+  <!-- Image Modal -->
+  <div id="img-modal"
+    class="hidden fixed inset-0 z-50 bg-black/75 backdrop-blur-sm flex items-center justify-center p-4">
+    <button id="img-modal-close" class="absolute top-3 right-3 text-white/90 text-3xl leading-none px-2"
+      aria-label="Close image">×</button>
+    <figure class="modal-viewport">
+      <img id="img-modal-img" src="" alt="" class="img-modal-media rounded shadow-lg" />
+      <figcaption id="img-modal-cap" class="img-modal-cap mt-2 text-center text-white/90 text-sm"></figcaption>
+    </figure>
   </div>
-  <script>
-      
-      // Get all the img elements in the grid
-      var images = document.querySelectorAll('.grid img');
 
-      // Loop through each img element
-      images.forEach(function (img) {
-        
-      // Add a click event listener to each img element
-        img.addEventListener('click', function () {
-          showModal(img.src);
-        });
+  <!-- Mobile-only sticky CTA -->
+  <div id="mobile-cta" class="fixed inset-x-0 bottom-0 z-50 md:hidden">
+    <div class="mx-auto max-w-5xl">
+      <div class="m-3 rounded-xl shadow-lg border bg-white">
+        <a id="mobile-cta-link" href="#add-your-speaker-link"
+          class="flex items-center justify-center gap-2 px-4 py-3 text-base font-semibold rounded-xl bg-brand-600 text-white">
+          Speak at City Hall (Oct 20) <span aria-hidden>→</span>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <script>
+
+      // Stable CSS viewport height for mobile (iOS/Android browser bars)
+      (function setVH() {
+        const vh = window.innerHeight * 0.01;
+        document.documentElement.style.setProperty('--vh', `${vh}px`);
+        window.addEventListener('resize', setVH, { passive: true });
+      }());
+    // Gallery modal logic (accessible)
+    (function () {
+      const modal = document.getElementById('img-modal');
+      const modalImg = document.getElementById('img-modal-img');
+      const modalCap = document.getElementById('img-modal-cap');
+      const closeBtn = document.getElementById('img-modal-close');
+
+      document.getElementById('gallery')?.addEventListener('click', (e) => {
+        const btn = e.target.closest('button[data-src]');
+        if (!btn) return;
+        const src = btn.getAttribute('data-src');
+        const alt = btn.getAttribute('data-alt') || '';
+        modalImg.src = src;
+        modalImg.alt = alt;
+        modalCap.textContent = alt;
+        modal.classList.remove('hidden');
+        document.body.style.overflow = 'hidden';
+        closeBtn.focus();
       });
 
-      // Get the modal by id
-      var modal = document.getElementById("modal");
-
-      // Get the modal image tag
-      var modalImg = document.getElementById("modal-img");
-
-      // This function is called when a small image is clicked
-      function showModal(src) {
-        modal.classList.remove('hidden');
-        modalImg.src = src;
-      }
-
-      // This function is called when the close button is clicked
       function closeModal() {
         modal.classList.add('hidden');
+        modalImg.src = '';
+        modalImg.alt = '';
+        modalCap.textContent = '';
+        document.body.style.overflow = '';
       }
-    </script>
+      closeBtn.addEventListener('click', closeModal);
+      modal.addEventListener('click', (e) => { if (e.target === modal) closeModal(); });
+      document.addEventListener('keydown', (e) => { if (!modal.classList.contains('hidden') && e.key === 'Escape') closeModal(); });
+    }());
+  </script>
 
   <script>
-    // Set copyright year
+    // Copyright year
     document.getElementById('y').textContent = new Date().getFullYear();
 
-    // QUICK EDIT HELP:
-    // Replace the following placeholders with your actual links.
-    const SPEAKER_SIGNUP_URL = '#add-your-speaker-link'; // TODO: paste the real speaker sign-up link (Google Form, City list, etc.)
-    const WHATSAPP_GROUP_URL = '#add-your-whatsapp-link'; // TODO: paste your WhatsApp invite link
+    // QUICK EDIT HELP: Replace placeholders with your actual links.
+    const SPEAKER_SIGNUP_URL = '#add-your-speaker-link'; // TODO paste real signup link
+    const WHATSAPP_GROUP_URL = '#add-your-whatsapp-link'; // TODO paste WhatsApp invite
 
-    // Apply speaker links everywhere
-    for (const id of ['speaker-link-top','speaker-link-hero','speaker-link-cta']) {
+    // Apply speaker links everywhere, including mobile sticky
+    for (const id of ['speaker-link-top', 'speaker-link-hero', 'speaker-link-cta', 'mobile-cta-link']) {
       const el = document.getElementById(id);
       if (el && SPEAKER_SIGNUP_URL && SPEAKER_SIGNUP_URL !== '#add-your-speaker-link') {
         el.href = SPEAKER_SIGNUP_URL;
-        el.setAttribute('target','_blank');
-        el.setAttribute('rel','noopener');
+        el.setAttribute('target', '_blank');
+        el.setAttribute('rel', 'noopener');
       }
     }
 
@@ -334,9 +412,10 @@
     const wa = document.getElementById('whatsapp');
     if (wa && WHATSAPP_GROUP_URL && WHATSAPP_GROUP_URL !== '#add-your-whatsapp-link') {
       wa.href = WHATSAPP_GROUP_URL;
-      wa.setAttribute('target','_blank');
-      wa.setAttribute('rel','noopener');
+      wa.setAttribute('target', '_blank');
+      wa.setAttribute('rel', 'noopener');
     }
   </script>
 </body>
+
 </html>
